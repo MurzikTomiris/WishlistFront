@@ -1,0 +1,410 @@
+body {
+  /*background-color: rgb(244, 235, 224);*/
+  background-image: url("C:\Tomiris\Courses\Step\Wishlist\WishlistFront\src\assets\bg.png");
+  background-repeat: repeat; /* Повторение фона по горизонтали и вертикали */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Home page*/
+
+.home {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 34px;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+}
+
+.login-form {
+  margin-top: 20px;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #6b71d7;
+  box-shadow: 0 0 4px rgba(244, 67, 54, 0.5);
+}
+
+.login-button {
+  width: 80%;
+  padding: 10px 15px;
+  background-color: #6b71d7;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #464dd8;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.register-button {
+  width: 80%;
+  padding: 10px 15px;
+  background-color: white;
+  color: #6b71d7;
+  border: 1px solid #6b71d7;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #464dd8;
+  color: white;
+  border: none;
+}
+
+.save-button {
+  width: 30%;
+  padding: 10px 15px;
+  background-color: #6b71d7;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #464dd8;
+}
+
+.cancel-button {
+  width: 30%;
+  padding: 10px 15px;
+  background-color: white;
+  color: #6b71d7;
+  border: 1px solid #6b71d7;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #464dd8;
+  color: white;
+  border: none;
+}
+
+/* Account page*/
+
+.account-page {
+  width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+label {
+  margin: 8px;
+}
+
+button {
+  background-color: #6b71d7;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #464dd8;
+}
+
+/*title */
+
+.title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*wishlist*/
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два в ряд */
+  gap: 20px; /* Отступы между карточками */
+  justify-content: center;
+  align-items: start; /* Выровнять карточки по верхнему краю */
+  padding: 20px;
+  max-width: 1100px; /* Чтобы карточки не слишком сужались */
+  margin: 0 auto;
+}
+
+/*wishlist card */
+
+.wishlist-card {
+  width: 80%;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.wishlist-card:hover {
+  transform: scale(1.05);
+}
+
+.wishlist-card-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  font-size: 18px;
+  font-style: italic;
+  color: #333;
+}
+
+.wishlist-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Запрещает перенос кнопок */
+}
+
+.wishlist-actions button {
+  flex: 1; /* Равномерное распределение ширины */
+  font-size: 12px;
+  white-space: nowrap; /* Запрещает перенос текста */
+  text-align: center;
+  margin: 10px;
+}
+
+/* Giftcards*/
+.giftcards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два в ряд */
+  gap: 20px; /* Отступы между карточками */
+  justify-content: center;
+  align-items: start; /* Выровнять карточки по верхнему краю */
+  padding: 20px;
+  max-width: 1100px; /* Чтобы карточки не слишком сужались */
+  margin: 0 auto;
+}
+
+.gift-card-image {
+  width: 80%;
+  max-width: 450px;
+  height: 250px;
+  object-fit: contain;
+  padding: 0;
+  margin: 0;
+}
+
+.gift-card {
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.gift-card:hover {
+  transform: scale(1.05);
+}
+
+.gift-card-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  font-size: 18px;
+  font-style: italic;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Запрещает перенос кнопок */
+}
+
+.actions button {
+  flex: 1; /* Равномерное распределение ширины */
+  font-size: 12px;
+  white-space: nowrap; /* Запрещает перенос текста */
+  text-align: center;
+  margin: 10px;
+}
+
+.reserved-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #464dd8;
+  color: white;
+  padding: 5px;
+}
+
+/*RegisterModal*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.modal .input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.modal input:focus {
+  outline: none;
+  border-color: #6b71d7;
+  box-shadow: 0 0 4px rgba(124, 53, 229, 0.5);
+}
+
+.modal .button-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.modal .save-button {
+  background-color: #6b71d7;
+  color: white;
+  margin: 10px auto;
+}
+
+.modal .save-button:hover {
+  background-color: #464dd8;
+}
+
+.modal .cancel-button {
+  background-color: white;
+  color: #6b71d7;
+  border: 1px solid #6b71d7;
+  margin: 10px auto;
+}
+
+.modal .cancel-button:hover {
+  background-color: #464dd8;
+  color: white;
+  border: none;
+}
